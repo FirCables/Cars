@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
-use Dotenv\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CarController extends Controller
 {
@@ -13,8 +13,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        $car / Car::with('owner')->get();
-        return response()->json($cars);
+        $car = Car::with('owner')->get();
+        return response()->json($car);
     }
 
     /**
@@ -26,16 +26,13 @@ class CarController extends Controller
            'brand' => 'string',
            'model' => 'string',
            'license_plate' => 'string',
-           'owner_id' => 'exists:owner, id',
+           'owner_id' => 'exists:owners,id',
 
         ]);
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
         }
-        $car = Car::find($id);
-        if (!$car {
-            return response()->json(['message' => 'Car not found'], 404);
-        })
+        
 
         $car = Car::create($request->all());
         return response()->json($car);
@@ -55,15 +52,32 @@ class CarController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Car $car)
+    public function update(Request $request, $id)
     {
-        //
+        
+        $validator = Validator::make($request->all(), [
+            'brand' => 'string',
+            'model' => 'string',
+            'license_plate' => 'string',
+            'owner_id' => 'exists:owner, id',
+ 
+         ]);
+         if ($validator->fails()) {
+             return response()->json(['errors' => $validator->errors()], 422);
+         }
+         $car = Car::find($id);
+         if (!$car) {
+             return response()->json(['message' => 'Car not found'], 404);
+         }
+ 
+         $car->update($request->all());
+         return response()->json($car);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Car $car)
+    public function destroy($id)
     {
         $car = Car::find($id);
         if(!$car) {
