@@ -41,8 +41,9 @@ class CarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Car $car)
+    public function show($id)
     {
+        $car = Car::find($id);
         if(!$car) {
             return response()->json(['message' => 'car not found'], 404);
         }
