@@ -1,0 +1,88 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "cars_test",
+    "collectionId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+    "dateExported": "2025-01-08T11:31:06.530Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "49cc2134-c36d-489c-9bc5-653ccb1e55d9",
+            "colId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+            "containerId": "",
+            "name": "delete car ",
+            "url": "http://127.0.0.1:8000/api/cars/1",
+            "method": "DELETE",
+            "sortNum": 15000,
+            "created": "2024-12-19T09:28:22.456Z",
+            "modified": "2024-12-20T07:32:07.081Z",
+            "headers": []
+        },
+        {
+            "_id": "2db66c54-26f9-4b62-b8ab-53ac35e6b085",
+            "colId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+            "containerId": "",
+            "name": "creeate new car",
+            "url": "http://127.0.0.1:8000/api/cars",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-12-19T09:13:33.729Z",
+            "modified": "2024-12-20T07:35:27.656Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\"owner_id\":\t2,\n\"brand\":\t\"Toyota\",\n\"model\" :\t\"Corolla\",\n\"license_plate\":\t\"XYZ-789\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9b13c8e4-2439-40e4-a028-05fffbe706c7",
+            "colId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+            "containerId": "",
+            "name": "get all",
+            "url": "http://localhost:8000/api/cars",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-12-19T09:13:52.910Z",
+            "modified": "2025-01-08T11:22:27.057Z",
+            "headers": []
+        },
+        {
+            "_id": "0f22e978-3314-453c-906c-d6fee7855561",
+            "colId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+            "containerId": "",
+            "name": "get car by id",
+            "url": "http://127.0.0.1:8000/api/cars/3",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-12-19T09:18:07.729Z",
+            "modified": "2025-01-08T11:25:12.139Z",
+            "headers": []
+        },
+        {
+            "_id": "3666aff2-529e-48a4-8778-3a215eeabaad",
+            "colId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+            "containerId": "",
+            "name": "get car by id co",
+            "url": "",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-12-19T09:18:18.183Z",
+            "modified": "2024-12-19T09:18:18.183Z",
+            "headers": []
+        },
+        {
+            "_id": "db864771-6fab-41aa-88aa-f8b777204ba6",
+            "colId": "7de46235-b3f7-4928-b665-43ea6f6e3854",
+            "containerId": "",
+            "name": "update car by id",
+            "url": "http://127.0.0.1:8000/api/cars/7",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-12-20T07:30:59.047Z",
+            "modified": "2025-01-08T11:28:52.286Z",
+            "headers": []
+        }
+    ],
+    "ref": "toDcqn7AExulNLB2g63shEsZCnkcoMifL74B2SeQjliLSR520qnW0X9pCuatPPBf3X-Go1buWfPNA3pDiY_VcQ"
+}
